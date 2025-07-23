@@ -1,11 +1,19 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Navbar from "./component/Navbar"; // Adjusted import path
+import Navbar from "./component/Navbar";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  // ✅ Correct useEffect placement
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <BrowserRouter>
       <div>

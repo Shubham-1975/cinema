@@ -16,7 +16,7 @@ const HomeSection1 = () => {
       {/* Foreground Content */}
       <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 px-6 sm:px-10 lg:px-20 py-20 sm:py-28">
         {/* Left Section - Title */}
-        <div className="text-center lg:text-left max-w-2xl space-y-4 mt-40 md:mt-7 lg:mt-30">
+        <div className="text-center lg:text-left max-w-2xl space-y-4 mt-20 md:mt-7 lg:mt-30">
           <h2 className="text-xl sm:text-2xl tracking-widest uppercase font-semibold text-green-300">
             Welcome To
           </h2>
