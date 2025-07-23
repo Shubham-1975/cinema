@@ -7,6 +7,7 @@ import Contact from "./pages/Contact";
 import Navbar from "./component/Navbar";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Footer from "../src/component/Footer";
 
 function App() {
   // ✅ Correct useEffect placement
@@ -23,6 +24,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );

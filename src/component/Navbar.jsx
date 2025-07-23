@@ -171,29 +171,53 @@ const Navbar = () => {
 
         {/* Mobile Nav */}
         {menuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-white text-black z-50 flex flex-col items-start px-6 py-4 shadow-md sm:hidden">
-            <Link to="/" className="py-1">
+          <div className="absolute top-16 left-0 w-full bg-black/80 text-white z-50 flex flex-col items-start px-6 py-4 shadow-md sm:hidden gap-3 mt-8">
+            <Link
+              to="/"
+              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
+            >
               Home
             </Link>
-            <Link to="/about" className="py-1">
+            <Link
+              to="/about"
+              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
+            >
               About Us
             </Link>
-            <Link to="/rules/general" className="py-1">
+            <Link
+              to="/rules/general"
+              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
+            >
               General Rules
             </Link>
-            <Link to="/rules/membership" className="py-1">
+            <Link
+              to="/rules/membership"
+              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
+            >
               Membership Rules
             </Link>
-            <Link to="/benefits/medical-aid" className="py-1">
+            <Link
+              to="/benefits/medical-aid"
+              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
+            >
               Medical Aid
             </Link>
-            <Link to="/benefits/pension-plan" className="py-1">
+            <Link
+              to="/benefits/pension-plan"
+              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
+            >
               Pension Plan
             </Link>
-            <Link to="/benefits/welfare-events" className="py-1">
+            <Link
+              to="/benefits/welfare-events"
+              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
+            >
               Welfare Events
             </Link>
-            <Link to="/contact" className="py-1">
+            <Link
+              to="/contact"
+              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
+            >
               Contact Us
             </Link>
           </div>
