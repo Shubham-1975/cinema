@@ -53,16 +53,16 @@ const ContactPage = () => {
             <h2 className="text-xl font-bold">Get in Touch</h2>
             <div className="flex items-start gap-2">
               <MdCall className="text-xl mt-1" />
-              <span>022-49241676 / 022-40158930</span>
+              <span>+91 8104611156</span>
             </div>
             <div className="flex items-start gap-2">
               <MdEmail className="text-xl mt-1" />
-              <span>info@cintaa.net</span>
+              <span>alliedmazdoorunion@gmail.com</span>
             </div>
             <div className="flex items-start gap-2">
               <MdLocationOn className="text-xl mt-1" />
               <span>
-                CINTAA Tower, 5th floor, Next to Kokilaben Dhirubhai Ambani
+                ACTADCO Tower, 5th floor, Next to Kokilaben Dhirubhai Ambani
                 Hospital, Gate No - 4, Four Bunglow, Andheri West, Mumbai - 400
                 053
               </span>
