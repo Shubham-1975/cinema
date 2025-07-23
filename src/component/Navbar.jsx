@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "../assets/Logo.png";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { MdEmail, MdCall } from "react-icons/md";
 import { ChevronDown } from "lucide-react";
