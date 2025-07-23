@@ -22,6 +22,8 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleMenuClick = () => setMenuOpen(false);
+
   return (
     <header
       className={`w-full z-50 transition-all duration-300 ${
@@ -86,7 +88,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Logo on Right */}
+        {/* Logo */}
         <div className="flex justify-end w-full sm:w-auto">
           <img
             src={logo}
@@ -164,6 +166,33 @@ const Navbar = () => {
             </div>
           </div>
 
+          {/* Who Are You Section */}
+          <div className="relative group">
+            <button className="flex items-center gap-1 hover:text-yellow-500">
+              Who Are You? <ChevronDown size={16} />
+            </button>
+            <div className="absolute hidden group-hover:block bg-white text-black mt-1 shadow-md rounded w-72 z-10">
+              <ul className="p-2 space-y-1 text-sm">
+                <li>
+                  <Link
+                    to="/who-we-are/committee"
+                    className="hover:bg-gray-100 p-1 px-3 block"
+                  >
+                    Committee Members
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/who-we-are/departments"
+                    className="hover:bg-gray-100 p-1 px-3 block"
+                  >
+                    Department Allocation
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <Link to="/contact" className="hover:text-yellow-500">
             Contact Us
           </Link>
@@ -171,55 +200,32 @@ const Navbar = () => {
 
         {/* Mobile Nav */}
         {menuOpen && (
-          <div className="absolute top-16 left-0 w-full bg-black/80 text-white z-50 flex flex-col items-start px-6 py-4 shadow-md sm:hidden gap-3 mt-8">
-            <Link
-              to="/"
-              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
-            >
-              About Us
-            </Link>
-            <Link
-              to="/rules/general"
-              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
-            >
-              General Rules
-            </Link>
-            <Link
-              to="/rules/membership"
-              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
-            >
-              Membership Rules
-            </Link>
-            <Link
-              to="/benefits/medical-aid"
-              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
-            >
-              Medical Aid
-            </Link>
-            <Link
-              to="/benefits/pension-plan"
-              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
-            >
-              Pension Plan
-            </Link>
-            <Link
-              to="/benefits/welfare-events"
-              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
-            >
-              Welfare Events
-            </Link>
-            <Link
-              to="/contact"
-              className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300  text-xl border-none bg-[#8b8888] w-full px-5"
-            >
-              Contact Us
-            </Link>
+          <div className="absolute top-16 left-0 w-full bg-black/90 text-white z-50 flex flex-col items-start px-6 py-4 shadow-md sm:hidden gap-3 mt-8">
+            {[
+              { path: "/", label: "Home" },
+              { path: "/about", label: "About Us" },
+              { path: "/contact", label: "Contact Us" },
+              { path: "/rules/general", label: "General Rules" },
+              { path: "/rules/membership", label: "Membership Rules" },
+              { path: "/benefits/medical-aid", label: "Medical Aid" },
+              { path: "/benefits/pension-plan", label: "Pension Plan" },
+              { path: "/benefits/welfare-events", label: "Welfare Events" },
+              { path: "/who-we-are/committee", label: "Committee Members" },
+              {
+                path: "/who-we-are/departments",
+                label: "Department Allocation",
+              },
+              
+            ].map((link, index) => (
+              <Link
+                key={index}
+                to={link.path}
+                onClick={handleMenuClick}
+                className="py-3 rounded-2xl hover:bg-[grey] text-yellow-300 text-xl border-none bg-[#8b8888] w-full px-5"
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         )}
       </div>

@@ -10,10 +10,10 @@ const ContactPage = () => {
           "url('https://www.shutterstock.com/image-photo/director-photography-camera-his-hands-600nw-2322694091.jpg')",
       }}
     >
-      <div className="w-full max-w-7xl bg-white/30 rounded-xl shadow-lg p-6 flex flex-col md:flex-row gap-6 lg:mt-30 md:mt-30 mt-35">
+      <div className="w-full max-w-7xl bg-white/80 rounded-xl shadow-lg p-6 flex flex-col md:flex-row gap-6 lg:mt-30 md:mt-30 mt-35">
         {/* Left - Contact Form */}
         <form className="md:w-1/2 w-full space-y-4">
-          <h2 className="text-xl font-bold text-gray-300">Contact Us</h2>
+          <h2 className="text-xl font-bold text-gray-800">Contact Us</h2>
           <input
             type="text"
             placeholder="Your Name"
